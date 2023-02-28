@@ -1,0 +1,183 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+}
+#root{
+  background-image: linear-gradient(to bottom right,#81acb6,#015c72);
+}
+
+.flex,.flex-col,.flex-wrap,.card{
+  display:flex;
+  justify-content: center;
+}
+
+.flex-col, .card{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.card{
+  padding:20px 20px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.badge{
+  right:0;
+}
+
+.border{
+ 
+}
+.items-center{
+  align-items: center;
+}
+.self-end{
+  align-self: end;
+}
+.self-center{
+  align-self: center;
+}
+.center-text{
+  text-align: :center;
+}
+.text-input{
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.35) ;
+  height: 2rem;
+}
+.jc-even{
+  justify-content: evenly-spaced;
+}
+.jc-space{
+  justify-content: space-between;
+}
+.shadow{
+  box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+}
+header{
+  position:relative;
+}
+.header{
+  
+  --background-image: linear-gradient(rgba(0,0,0,.5), transparent);
+  position: fixed;
+  top:-10px;
+  margin-top: 10px;
+  width:100%;
+  background-color: white;
+  z-index: 10;
+}
+
+.shadow,.header{
+  box-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+.lbshadow{
+  filter: drop-shadow(0 2px 20px rgba(0,0,0,.2));
+}
+.blur{ filter: blur(10px);}
+.mg-auto{
+  margin:auto auto;
+}
+
+.relative{
+  position:relative;
+}
+.rounded{
+  border-radius: 20px;
+}
+.round-edges{
+  border-radius: 50%;
+}
+.abs,.badge{
+  position: absolute;
+}
+.fixed{
+  position: fixed;
+}
+.color-gray{
+  color: gray;
+}
+.gray{
+  background-color: gray;
+}
+.gray-dient{
+  background-image: linear-gradient(transparent,rgba(0,0,0,.05));
+}
+.lgray{
+  background-color: #84848479;
+}
+.llgray{
+  background-color: #c1c1c170;
+}
+.wgray{
+  background-color: #e7e7e7;
+}
+.white{
+  background-color: white;
+}
+.prog-gradient{
+  background: cyan;
+}
+.glowcyan{
+  
+  filter:drop-shadow(0 0 10px lightblue);
+}
+.glow-green{
+  filter:drop-shadow(0 0 10px lightgreen);
+}
+.lgreen{
+  background-color: lightgreen;
+}
+.clip{
+  overflow: hidden;
+}
+@keyframes fade-in{
+  from{
+    background-color: blue;
+    color: black;
+  }
+  to{
+   background-color: transparent;
+   color: transparent;
+  }
+}
+.alert{
+  animation-name:fade-in;
+  animation-delay: .1s;
+  animation-duration:.2s;
+}
+@keyframes spin {
+  from {   transform: rotate(0deg);  }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes grow{
+   from{  transform: scale(0);}
+   to{  transform: scale(1);}
+}
+@keyframes fadeup{
+  from{transform: translateY(30px) ; opacity:0.0; }
+  to{ transform: translateY(0px) ; opacity:1.0;}
+}
+@keyframes biggn{
+  from{transform: scale(.9); color: green; }
+  to{transform: scale(1.4); color: transparent; }
+}
+@keyframes redd{
+  from{transftran scale(.9); color: red; }
+  to{transform: scale(1.2); color: transparent; }
+}
+.redd{ animation: redd ease-in .5s 1 both; }
+.biggn{ animation: biggn ease-in .5s 1 both; }
+.fadeup{ animation: fadeup ease-in .1s 1 both; }
+.grow{ animation: grow ease-in .1s 1 both; }
+.spin { animation: spin infinite 20s linear both; }
+.trans-filter{ transition:.2 filter; }
+.stop{ animation-play-state:  };
