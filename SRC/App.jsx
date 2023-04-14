@@ -1,6 +1,7 @@
 import React from 'react'
 import Polys from './Polys'
 import Header from './Header'
+import Footer from './Footer'
 import {connect} from 'react-redux'
 import {addPoly,clrAlert,newAlert,editPoly} from   './redux/Actions'
 import Notification from './Notification'
@@ -24,10 +25,12 @@ export default function App(){
     (disp)=>({clr(alrt){disp(clrAlert(alrt))}}))
     (Notification)*/
   return(
-    <div>
-        <Header notify={notifier}/>
-        <Polys/>
-    
+  <div className='bg'>
+    <div className='game-bg'>
+      <Header notify={notifier}/>
+      <Polys/>
+    </div>
+      <Footer/>
    </div>
     
   )

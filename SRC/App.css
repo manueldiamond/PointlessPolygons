@@ -4,10 +4,23 @@
 body{
   margin: 0;
 }
-#root{
+.game-bg{
   background-image: linear-gradient(to bottom right,#81acb6,#015c72);
 }
 
+.bg{
+  position: fixed;
+  min-width:100%;
+  min-height:100%;
+  background-color: darkgray;
+}
+.footer{
+  padding: 5px;
+  color:white;
+}
+.pad-5{
+  padding: 5px;
+}
 .flex,.flex-col,.flex-wrap,.card{
   display:flex;
   justify-content: center;
@@ -171,13 +184,13 @@ header{
   to{transform: scale(1.4); color: transparent; }
 }
 @keyframes redd{
-  from{transftran scale(.9); color: red; }
+  from{transform : scale(.9); color: red; }
   to{transform: scale(1.2); color: transparent; }
 }
+
+.grow{ animation: grow ease-in .1s 1 both; }
 .redd{ animation: redd ease-in .5s 1 both; }
 .biggn{ animation: biggn ease-in .5s 1 both; }
 .fadeup{ animation: fadeup ease-in .1s 1 both; }
-.grow{ animation: grow ease-in .1s 1 both; }
 .spin { animation: spin infinite 20s linear both; }
 .trans-filter{ transition:.2 filter; }
-.stop{ animation-play-state:  };

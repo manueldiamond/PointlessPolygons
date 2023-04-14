@@ -61,7 +61,7 @@ export default function Polygons(){
   
   
   return (
-    <div>
+    <div className=''>
       <div className='flex-wrap'>
        {polys.map( (poly)=>
          (<Poly key={poly.id} edit={(stuff)=>edit(poly.id,stuff)} addPoints={points} canPay={canPay} remove={()=>remove(poly.id)} {...poly} />)

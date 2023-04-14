@@ -19,8 +19,6 @@ export default function Header({notify}){
        void pointsr.current.offsetWidth
        pointsr.current.classList.add(tmpPoints>points?'redd':'biggn')
        setTempPoints(points)
-       
-      
      }
      ,[points])
    

@@ -88,8 +88,8 @@ export function PolyCard({sides,time,elapsed, edit, level=0, boost,  remove,stat
   return name
  }
   return(
-    <div className='flex relative items-center'>
-      <div ref={Ref} style={{transition:"filter .2s"}}className={`card grow flex-col items-center wgray rounded relative lbshadow  ${!menu?(state===1?'glowcyan':canUpgrade&&'glow-green'):'blur'}`} onClick={onclk}>
+    <div  className='flex relative items-center'>
+      <div ref={Ref} style={{transition:"filter .2s"}} className={`card grow flex-col items-center wgray rounded relative lbshadow  ${!menu?(state===1?'glowcyan':canUpgrade&&'glow-green'):'blur'}`} onClick={onclk}>
       
       <span style={{display:'flex',fontSize:'2em'}} className='center-text mg-auto'><strong>{name}</strong></span>
       <div style={{width:'80px'}}className='flex-wrap'>
@@ -103,7 +103,7 @@ export function PolyCard({sides,time,elapsed, edit, level=0, boost,  remove,stat
       {boosted&&<ProgressBar value={boostElapsed} maxValue={boostDur} over='cyan' customText='BOOSTED - ' />}
       </div>
       {menu&&<Menu upg={upgrade} del={remove} canUpgrade={canUpgrade} boost={boostCard} canBoost={canPay(upgCost)} close={()=>setMenu(false)}>
-        <h3 style={{color:'green',marginBottom:0,}} >UPGRADE {canUpgradeShape?name:level} >> {canUpgradeShape?polyName(sides+1):(level+1)}</h3>
+        <h3 style={{color:'green',marginBottom:0,}} >UPGRADE {canUpgradeShape?name:level} to {canUpgradeShape?polyName(sides+1):(level+1)}</h3>
         <div style={{color: canUpgrade?'':'red'}}>COST: {upgCost}</div>
       </Menu>}
     </div>
